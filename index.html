@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hetvi Doshi</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="description" content="Portfolio of Hetvi Doshi — AI/ML enthusiast specializing in Data Science, NLP, and Generative AI. Explore projects, skills, and experience." />
+  <meta name="keywords" content="AI, ML, Data Science, NLP, Portfolio, Machine Learning, Python, Hetvi Doshi" />
+  <meta name="author" content="Hetvi Doshi" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hetvi Doshi — AI/ML Engineer & Data Scientist" />
+  <meta property="og:description" content="Explore my portfolio — AI/ML projects, data science skills, and professional experience." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Lora:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            dark: { 950: '#07070a', 900: '#0d0d12', 800: '#141418', 700: '#1c1c22' },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-dark-950 text-slate-100">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="logo-professional">
+        <span class="logo-h">H</span><span class="logo-d">D</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="desktop-nav hidden md:flex items-center gap-8">
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
+        <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="hamburger md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+    <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
+    <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
+  </div>
+
+  <!-- ========== HERO + ABOUT SECTION ========== -->
+  <section id="hero" aria-label="Introduction">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-gradient-overlay"></div>
+
+    <div class="hero-split">
+      <!-- LEFT COLUMN — Identity -->
+      <div class="hero-left">
+        <!-- Name -->
+        <h1 class="hero-name hero-animate hero-animate-delay-1">
+          <span class="gradient-text">Hetvi Doshi</span>
+        </h1>
+
+        <!-- Status Badge -->
+        <div class="hero-animate hero-animate-delay-2 mt-4 mb-8">
+          <span class="status-badge">
+            <span class="status-dot"></span>
+            Open to Opportunities
+          </span>
+        </div>
+
+        <!-- CTA & Social Row 1 -->
+        <div class="hero-animate hero-animate-delay-3 flex flex-wrap gap-3 mt-6">
+          <a href="https://drive.google.com/file/d/1a7ztJQqwhnetFKlcIRS48Jv7l6mzZ3ia/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hero-btn hero-btn-secondary w-[160px] justify-center">
+            <i class="fa-solid fa-file-alt"></i> Resume
+          </a>
+          <a href="https://www.linkedin.com/in/hetvi-doshi22/" target="_blank" rel="noopener noreferrer" class="hero-btn hero-btn-secondary w-[160px] justify-center">
+            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- Social & CTA Row 2 -->
+        <div class="hero-animate hero-animate-delay-4 flex flex-wrap gap-3 mt-3">
+          <a href="https://github.com/hetvidoshi22" target="_blank" rel="noopener noreferrer" class="hero-btn hero-btn-secondary w-[160px] justify-center">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="mailto:hetvidoshi2205@gmail.com" class="hero-btn hero-btn-secondary w-[160px] justify-center">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN — About -->
+      <div class="hero-right hero-animate hero-animate-delay-3">
+        <div class="glass-card about-card-hero p-7 md:p-8 relative overflow-hidden">
+          <!-- Decorative gradient orbs -->
+          <div class="about-orb about-orb-1"></div>
+          <div class="about-orb about-orb-2"></div>
+
+          <div class="relative z-10">
+            <h3 class="font-display text-lg font-bold mb-4 flex items-center gap-2">
+              <span class="gradient-text">Beyond the Resume</span>
+            </h3>
+            <p class="text-slate-400 text-sm mb-3 leading-relaxed">
+              For me, the most exciting part of technology isn't writing code - it's seeing an idea evolve into something that <span class="text-highlight">solves a real problem</span>. That mindset has shaped my journey from a curious engineering student to someone deeply interested in <span class="text-highlight">Data Science, Machine Learning, and Artificial Intelligence</span>.
+            </p>
+            <p class="text-slate-400 text-sm mb-3 leading-relaxed">
+              I learn best by building and challenging myself, which is why I've participated in <span class="text-highlight">25+ hackathons, challenges, and innovation programs</span>. These experiences taught me how to work under pressure, collaborate with teams, and <span class="text-highlight">transform concepts into working solutions</span>.
+            </p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              My journey has also included being selected for <span class="text-highlight">Amazon ML Summer School</span> and reaching the <span class="text-highlight">finals of Smart India Hackathon (SIH)</span>. Today, I'm focused on exploring <span class="text-highlight">AI, NLP, and Generative AI</span> while continuously learning through projects, experimentation, and real-world problem solving.
+            </p>
+            <!-- END ABOUT TEXT -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#experience" class="scroll-indicator" aria-label="Scroll down">
+      <span>Scroll</span>
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section id="experience" class="pt-10 pb-24 px-6 bg-dark-900/60">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="section-heading reveal">
+        Work <span class="gradient-text">Experience</span>
+      </h2>
+      <p class="section-subheading reveal">Experiences that shaped my journey in AI and Machine Learning.</p>
+
+      <div class="timeline">
+        <!-- Entry 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">Jan 2026 - Feb 2026</span>
+            <h3>AI/ML Intern</h3>
+            <p class="timeline-company">
+              <i class="fa-solid fa-building mr-2"></i>Wizcoder
+            </p>
+            <p class="timeline-desc">
+              Built an NLP-powered sales analytics assistant that converted natural language questions into database queries, enabling conversational business intelligence across multi-table datasets. Designed scalable data workflows and implemented intelligent routing for accurate real-time insights.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">LLMs</span>
+              <span class="tech-tag">FastAPI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">Aug - Aug 2025</span>
+            <h3>Selected Participant</h3>
+            <p class="timeline-company">
+              <i class="fa-brands fa-amazon mr-2"></i>Amazon ML Summer School 2025
+            </p>
+            <p class="timeline-desc">
+              Gained hands-on exposure through expert-led sessions by Amazon scientists on advanced ML topics including DNNs, LLMs, Causal Inference, and Reinforcement Learning.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3">
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Deep Learning</span>
+              <span class="tech-tag">LLMs</span>
+            </div>
+            <!-- REPLACE: Update href to your certificate link -->
+            <a href="https://drive.google.com/file/d/1nodUJztg6qXmPajCp1dCIEAOSokCbwX8/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link mt-3 inline-flex">
+              <i class="fa-solid fa-certificate mr-1"></i> View Certificate <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section id="projects" class="pt-10 pb-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="section-heading reveal">
+        Featured <span class="gradient-text">Projects</span>
+      </h2>
+      <p class="section-subheading reveal">Building solutions that solve real-world problems.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+
+        <!-- Project 1 -->
+        <div class="glass-card gradient-border project-card reveal" style="--stagger-index:0">
+          <div class="project-header">
+            <h3>AI-Based DPR Evaluation System</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">
+              An AI-powered system that automates the evaluation of Detailed Project Reports (DPRs) by analyzing compliance, risks, and guideline adherence. Built using NLP, hybrid PDF extraction, and RAG to process multilingual and scanned documents, reducing manual review efforts from hours to minutes.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">RAG</span>
+              <span class="tech-tag">FastAPI</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/hetvidoshi22/AI-DPR-Evaluation-System" target="_blank" rel="noopener noreferrer" class="project-link project-link-github">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card gradient-border project-card reveal" style="--stagger-index:1">
+          <div class="project-header">
+            <h3>NURA Wellness App</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">
+              A multi-modal AI wellness platform that analyzes behavioral, wearable, Wi-Fi, and conversational data to assess mental health risks. Leverages LangGraph workflows and LLM-powered reasoning to generate personalized wellness insights and automated reports.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Langchain</span>
+              <span class="tech-tag">LangGraph</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/hetvidoshi22/Nura-Wellness-App" target="_blank" rel="noopener noreferrer" class="project-link project-link-github">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card gradient-border project-card reveal" style="--stagger-index:2">
+          <div class="project-header">
+            <h3>Slack AI Data Bot</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">
+              An AI-powered business intelligence assistant that allows users to query databases using natural language directly from Slack. Converts user questions into SQL queries, retrieves relevant insights, and delivers real-time analytics through a conversational interface.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">LangChain</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/hetvidoshi22/slack-ai-data-bot" target="_blank" rel="noopener noreferrer" class="project-link project-link-github">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="glass-card gradient-border project-card reveal" style="--stagger-index:3">
+          <div class="project-header">
+            <h3>Multimodal Product Price Prediction</h3>
+          </div>
+          <div class="project-body">
+            <p class="project-desc">
+              Developed a multimodal ML pipeline for product price prediction using image, text, and structured data. Leveraged ResNet50V2, TF-IDF, and LightGBM to extract meaningful features from noisy catalog data and achieved a top 25% leaderboard ranking in Amazon ML Challenge 2025.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">LightGBM</span>
+              <span class="tech-tag">ResNet50V2</span>
+              <span class="tech-tag">TF-IDF</span>
+              <span class="tech-tag">Machine Learning</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/hetvidoshi22/amazon-ml-challenge-2025" target="_blank" rel="noopener noreferrer" class="project-link project-link-github">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
+          </div>
+        </div>
+
+        <!-- GitHub CTA Text Link — beside project 4 -->
+        <div class="github-cta-text reveal lg:col-span-2" style="--stagger-index:4">
+          <i class="fa-brands fa-github github-cta-text-icon"></i>
+          <p class="github-cta-text-label">Want to see more?</p>
+          <a href="https://github.com/hetvidoshi22" target="_blank" rel="noopener noreferrer" class="github-cta-text-link">
+            Check out my other projects on GitHub <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== ACHIEVEMENTS SECTION ========== -->
+  <section id="achievements" class="pt-10 pb-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="section-heading reveal">
+        Key <span class="gradient-text">Achievements</span>
+      </h2>
+      <p class="section-subheading reveal">Recognitions earned through learning, building, and competing.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+
+        <!-- Achievement 1: SIH -->
+        <div class="glass-card gradient-border achievement-card reveal" style="--stagger-index:0">
+          <div class="achievement-icon">
+            <i class="fa-solid fa-flag-checkered"></i>
+          </div>
+          <h3>SIH 2025 Finalist</h3>
+          <p>Smart India Hackathon 2025</p>
+          <a href="https://www.linkedin.com/posts/hetvi-doshi22_sih2025-hackathonjourney-grandfinale-activity-7395139053995724802--8nX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE1uKAYBzZrknNfcEjvJ4G74QTpy7ovMPao" target="_blank" class="mt-3 inline-flex items-center gap-2 text-sm text-accent hover:text-accent-light transition-colors font-semibold">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Post
+          </a>
+        </div>
+
+        <!-- Achievement 2: Amazon ML Summer School -->
+        <div class="glass-card gradient-border achievement-card reveal" style="--stagger-index:1">
+          <div class="achievement-icon">
+            <i class="fa-brands fa-amazon"></i>
+          </div>
+          <h3 class="mt-4">Selected: 3,000 / 60,000+</h3>
+          <p>Amazon ML Summer School 2025</p>
+          <a href="https://drive.google.com/file/d/1nodUJztg6qXmPajCp1dCIEAOSokCbwX8/view?usp=sharing" target="_blank" class="mt-3 inline-flex items-center gap-2 text-sm text-accent hover:text-accent-light transition-colors font-semibold">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Certificate
+          </a>
+        </div>
+
+        <!-- Achievement 3: ET AI Hackathon -->
+        <div class="glass-card gradient-border achievement-card reveal" style="--stagger-index:2">
+          <div class="achievement-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3 class="mt-4">Semi Finalist</h3>
+          <p>The Economic Times GenAI Hackathon 2026</p>
+          <div class="flex flex-wrap justify-center gap-3 mt-3">
+            <a href="https://drive.google.com/file/d/1c-0OtSoLvHqmpYAiO8zD9HMHZ_-iGHU1/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-light transition-colors font-semibold">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Certificate
+            </a>
+          </div>
+        </div>
+
+        <!-- Achievement 4: Amazon ML Challenge -->
+        <div class="glass-card gradient-border achievement-card reveal" style="--stagger-index:3">
+          <div class="achievement-icon">
+            <i class="fa-solid fa-ranking-star"></i>
+          </div>
+          <h3>Rank 1,470 / 6,000+ Teams</h3>
+          <p>Amazon ML Challenge 2025</p>
+          <a href="https://www.linkedin.com/posts/hetvi-doshi22_amazonmlchallenge2025-machinelearning-teamwork-activity-7384657872770711552-KuE6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE1uKAYBzZrknNfcEjvJ4G74QTpy7ovMPao" target="_blank" class="mt-3 inline-flex items-center gap-2 text-sm text-accent hover:text-accent-light transition-colors font-semibold">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Post
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS SECTION ========== -->
+  <section id="certifications" class="pt-10 pb-24 px-6 bg-dark-900/60">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="section-heading reveal">
+        <span class="gradient-text">Certifications</span>
+      </h2>
+      <p class="section-subheading reveal">Learning beyond the classroom.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+
+        <!-- Cert 1: Oracle -->
+        <div class="glass-card gradient-border cert-card reveal" style="--stagger-index:0">
+          <div class="cert-icon">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <h3>OCI Data Science Professional</h3>
+          <p class="cert-org">Oracle University</p>
+          <a href="https://drive.google.com/file/d/1IIebpUbPB2ZgcPVWA12n1hccdozTtxE2/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+            View Credential <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Cert 2: IBM -->
+        <div class="glass-card gradient-border cert-card reveal" style="--stagger-index:1">
+          <div class="cert-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3>IBM SkillsBuild - Data Analytics</h3>
+          <p class="cert-org">CSRBOX × IBM</p>
+          <a href="https://drive.google.com/file/d/1AawK3CpFFhlvKN1AhRgIJsi9egQfLcsR/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+            View Credential <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Cert 3: SAP -->
+        <div class="glass-card gradient-border cert-card reveal" style="--stagger-index:2">
+          <div class="cert-icon">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3>Data Analysis and AI/ML</h3>
+          <p class="cert-org">SAP × Edunet</p>
+          <a href="https://drive.google.com/file/d/1wxNYHDsGFfHgHaDb7IK_NCvUc89FqM5z/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+            Foundation Certificate <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="https://drive.google.com/file/d/1rWSf3kB3v-yyoqiFa4NojbvCzq-vblX5/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+            Advanced Certificate <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer py-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <!-- Brand -->
+        <div>
+          <a href="#hero" class="font-display text-2xl font-bold tracking-tight inline-block mb-3">
+            <span class="gradient-text">Hetvi Doshi</span>
+          </a>
+          <p class="text-slate-500 text-sm leading-relaxed">
+            Building intelligent solutions through Data, AI, and Innovation.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-display font-semibold text-sm mb-4 text-slate-300">Quick Links</h4>
+          <nav class="flex flex-col gap-2 text-sm">
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#certifications">Certifications</a>
+          </nav>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <h4 class="font-display font-semibold text-sm mb-4 text-slate-300">Connect</h4>
+          <div class="flex gap-3">
+            <!-- REPLACE: Update social links -->
+            <a href="https://github.com/hetvidoshi22" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/hetvi-doshi22/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:hetvidoshi2205@gmail.com" class="footer-social-link" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider & Copyright -->
+      <div class="border-t border-white/5 pt-8 flex items-center justify-center">
+        <p class="text-slate-600 text-xs">
+          &copy; <span id="current-year"></span> Hetvi Doshi. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Set current year -->
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
