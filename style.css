@@ -670,6 +670,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1rem;
+  text-align: justify;
 }
 
 .project-card .project-body {
@@ -829,6 +830,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  text-align: justify;
 }
 
 /* ---------- Achievements ---------- */
@@ -943,6 +945,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-muted);
   margin-bottom: 1.25rem;
   flex: 1;
+  text-align: justify;
 }
 
 .cert-link {
@@ -1095,6 +1098,23 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeInUp 0.4s ease-out;
 }
 
+.form-error {
+  display: none;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  text-align: center;
+  font-size: 0.88rem;
+  margin-top: 1rem;
+}
+
+.form-error.show {
+  display: block;
+  animation: fadeInUp 0.4s ease-out;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   background: var(--bg-secondary);
@@ -1130,6 +1150,39 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--bg-primary) !important;
   transform: translateY(-3px);
   box-shadow: 0 4px 15px rgba(0, 240, 255, 0.25);
+}
+
+/* ---------- Global Text Align Utilities ---------- */
+.text-slate-400, .text-slate-500 {
+  text-align: justify;
+}
+
+/* ---------- Floating WhatsApp ---------- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 5.5rem; /* placed above the back-to-top button */
+  right: 2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  z-index: 998;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: all var(--transition-base);
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+  color: white;
 }
 
 /* ---------- Back to Top ---------- */

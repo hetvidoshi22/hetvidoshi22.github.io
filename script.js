@@ -388,6 +388,7 @@ function initSmoothScroll() {
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error');
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
@@ -397,17 +398,34 @@ function initContactForm() {
     const originalText = btn.innerHTML;
     btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
     btn.disabled = true;
+    
+    // Hide previous messages
+    if (successMsg) successMsg.classList.remove('show');
+    if (errorMsg) errorMsg.classList.remove('show');
 
-    setTimeout(() => {
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> Sent!';
-      if (successMsg) successMsg.classList.add('show');
-      form.reset();
+    // Replace these with your actual IDs
+    emailjs.sendForm('service_yophgse', 'template_aqs9etd', form)
+      .then(() => {
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Sent!';
+        if (successMsg) successMsg.classList.add('show');
+        form.reset();
 
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.disabled = false;
-        if (successMsg) successMsg.classList.remove('show');
-      }, 3000);
-    }, 1500);
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+          if (successMsg) successMsg.classList.remove('show');
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
+        btn.innerHTML = '<i class="fa-solid fa-xmark"></i> Failed';
+        if (errorMsg) errorMsg.classList.add('show');
+
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+          if (errorMsg) errorMsg.classList.remove('show');
+        }, 5000);
+      });
   });
 }
