@@ -68,7 +68,7 @@
 
       <!-- Desktop Nav -->
       <div class="desktop-nav hidden md:flex items-center gap-8">
-        <a href="#hero" class="nav-link" data-section="hero">Home</a>
+        <a href="#hero" class="nav-link" data-section="hero">About</a>
         <a href="#experience" class="nav-link" data-section="experience">Experience</a>
         <a href="#projects" class="nav-link" data-section="projects">Projects</a>
         <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
@@ -85,7 +85,7 @@
 
   <!-- Mobile Nav Overlay -->
   <div id="mobile-nav" class="mobile-nav">
-    <a href="#hero" class="nav-link" data-section="hero">Home</a>
+    <a href="#hero" class="nav-link" data-section="hero">About</a>
     <a href="#experience" class="nav-link" data-section="experience">Experience</a>
     <a href="#projects" class="nav-link" data-section="projects">Projects</a>
     <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
@@ -515,6 +515,29 @@
           </div>
 
           <div class="form-group">
+            <label for="contact-phone" class="form-label">Phone Number</label>
+            <input
+              type="tel"
+              id="contact-phone"
+              name="phone"
+              class="form-input"
+              placeholder="+91 9876543210"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-inquiry" class="form-label">Inquiry Type</label>
+            <select id="contact-inquiry" name="inquiry" class="form-input form-select" required>
+              <option value="" disabled selected>Select an option...</option>
+              <option value="Job Opportunity">Job Opportunity</option>
+              <option value="Internship Opportunity">Internship Opportunity</option>
+              <option value="Project Collaboration">Project Collaboration</option>
+              <option value="Freelance Work">Freelance Work</option>
+              <option value="General Inquiry">General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
             <label for="contact-message" class="form-label">Message</label>
             <textarea
               id="contact-message"
@@ -562,7 +585,7 @@
         <div>
           <h4 class="font-display font-semibold text-sm mb-4 text-slate-300">Quick Links</h4>
           <nav class="flex flex-col gap-2 text-sm">
-            <a href="#hero">Home</a>
+            <a href="#hero">About</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#achievements">Achievements</a>

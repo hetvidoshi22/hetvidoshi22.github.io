@@ -1028,6 +1028,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-input,
+.form-select,
 .form-textarea {
   width: 100%;
   padding: 12px 16px;
@@ -1042,10 +1043,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-input:focus,
+.form-select:focus,
 .form-textarea:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.08), 0 0 20px rgba(0, 240, 255, 0.04);
   background: rgba(255, 255, 255, 0.03);
+}
+
+.form-select option {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .form-input::placeholder,
