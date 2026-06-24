@@ -196,21 +196,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-.logo-professional span {
-  transition: color var(--transition-base);
-}
-
-.logo-professional .logo-h {
-  color: var(--accent);
-}
-
-.logo-professional .logo-d {
-  color: var(--accent);
-}
-
-.logo-professional:hover span {
-  color: var(--accent-light);
-}
 
 .nav-link {
   position: relative;
